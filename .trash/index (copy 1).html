@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>timer</title>
+  </head>
+  <body>
+    <h5 id="output"></h5>
+    <button id="start">start-timer</button>
+    <button id="stst">stop/start-timer</button>
+    <button id="restart">null</button>
+    <!-- <script></script> -->
+    <script>
+      var _time = 0;
+      var _status = false;
+
+
+      document.getElementById('start').addEventListener('click',function(){
+        starttimer(idk);
+      })
+
+      function starttimer(callback){
+        setTimeout(function(){
+          _time = _time + 1;
+          document.getElementById('output').innerText = parseInt(_time);
+        },1000)
+
+        callback();
+      }
+
+      function qwer(){
+        if(_status == false){
+          console.log("test.status.0.012");
+        } else if (_status == true){
+          starttimer(qwer);
+        }
+      }
+      // fuck my life !;
+      // malaka exw 100 pragmata sto mialo mou kai exw kai th mana moy na
+      // xtypietai, gamw ta kerata ths thn putana 
+
+      document.getElementById('stst').addEventListener('click',function(){
+        if(_status == true){
+          _status = false;
+        } else if (_status == false){
+          _status = true;
+        } else {
+          console.log("fuck my life again")
+        }
+        // it WORKS !!!!!!!
+        if(_status == false){
+          console.log("test.false.0.012");
+          console.log("status is false so the program is paused")
+        } else if (_status == true){
+          starttimer(qwer);
+          console.log("test.true.0.012");
+        }
+      })
+      document.getElementById('output').innerText = parseInt(_time);
+    </script>
+  </body>
+</html>
